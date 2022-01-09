@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+    <head>
+        <!--
+        <style>
+            .filha{
+                height: 100px;
+                width: 100px;
+                background-color: aqua;
+            }
+        </style>
+        Nesse modelo, as três classes de filha recebem a mesma formatação,
+         e assim o resultado é a mesma figura três vezes, uma embaixo da outra - coluna. 
+        -->
+        <!--
+        O CSS segue a ordem do texto, literalmente uma cascata. !!! 
+        O padrão do flex-direction do display é row (linha, deitado, horizontal)
+        Quando não se define a altura do id pai, a altura dele é a altura das três
+        classes filhas. 
+        As três classes filhas estão dentro do id pai. 
+       -->
+        <!--
+        O padrão do flex-direction do display é row (linha, deitado, horizontal) 
+        -->
+
+        <style>
+            #pai{
+                width: 100%;
+                height: 400px;
+                background-color: sandybrown;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+            }
+
+            .filha{
+                height: 100px;
+                width: 100px;
+                background-color: aqua;
+            }
+
+            .primeira{
+                background-color: cadetblue;
+            }
+
+            .segunda{
+                background-color: plum;
+            }
+
+            .terceira{
+                background-color: pink;
+            }
+        </style>
+
+    </head>
+
+    <body>
+        <!--
+        <h1>Título</h1>
+        <h2>SubtítuloA</h2>
+        <h3>SubtítuloB</h3>
+        <h4>SubtítuloC</h4>
+        <h5>SubtítuloD</h5>
+        <h6>SubtítuloE</h6>
+        <p>parágrafo</p>
+        <a href="https://www.google.com">página do google (hiperlink)</a>
+        <input>
+        <input type="text">
+        <button>botão</button>
+        <button>Clique aqui ;)</button>
+        <img src="./assets/fire.svg">
+        -->
+        
+        <!--
+            comentários - sinal de maior, ponto de exclamação, pois traços 
+        -->
+
+        <div id="pai">
+            <div class="filha primeira"></div>
+            <div class="filha segunda"></div>
+            <div class="filha terceira"></div>
+        </div>
+
+
+
+
+    </body>
+
+</html>
+

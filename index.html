@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+    <head>
+
+        <title>Tinder Fluxo | Pame</title>
+        
+        <style>
+            
+            body {
+                background-color:rgb(240, 240, 240);
+                margin: 0;
+            }
+
+            header{
+                width: 20%;
+                height: 70px;
+                background-image: linear-gradient(to right, #FC2974,#FD4059 , #FE573E);
+                display: flex;
+                align-items:center;
+                justify-content: space-around;
+
+            }
+
+            .usuario{
+                display: flex;
+                align-items:center;
+                justify-content: space-around;
+                gap: -10px;
+            }
+
+                .logo{
+                    width: 36px;
+                    height: 36px;
+                    border-radius: 20px;
+                }
+
+                .button1{
+                    background-color:rgba(100, 96, 96, 0.192);
+                    width: 210px;
+                    height: 36px;
+                    border-radius: 20px;
+                    border: none;
+                    font-family: Verdana, Geneva, Tahoma, sans-serif;
+                    font-size: 15px;
+                    text-align: left;
+                    padding-left: 20px;
+                    color: ghostwhite;
+                    cursor: pointer;
+                }
+
+            .botoes{
+                display: flex;
+                align-items:center;
+                justify-content: space-around;
+                gap: 16px;
+            }
+
+                .button2{
+                    background-color:rgba(100, 96, 96, 0.192);
+                    width: 36px;
+                    height: 36px;
+                    border-radius: 20px;
+                    border: none;
+                    cursor: pointer;
+                }
+
+            #pai{
+                width: 100%;
+                height: 850px;
+                background-color:lightskyblue;
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-end;
+            }
+
+            .filha{
+                height: 100%;
+            }
+
+            .primeira{
+                background-color:ghostwhite;
+                width: 20%;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items:flex-start; 
+                gap: 220px;
+            }
+
+                .teclas{
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items:flex-start;
+                }
+
+                    .button3{
+                        background-color:ghostwhite;
+                        width: 120px;
+                        height: 36px;
+                        border: none;
+                        font-family: Verdana, Geneva, Tahoma, sans-serif;
+                        font-size: 14px;
+                        font-weight: 550;
+                        text-align: center;
+                        padding-left: 20px;
+                        padding-right: 20px;
+                        color: black;
+                        cursor: pointer;  
+                    }
+
+                    .button3:hover{
+                        border-bottom-width: 5px;
+                        border-bottom-style:solid;
+                        border-bottom-color:#FD4059;
+                    }
+
+                .relato{
+                    font-family: Verdana, Geneva, Tahoma, sans-serif;
+                    font-size: 14px;
+                    text-align: center;
+                    padding-left: 20px;
+                    padding-right: 20px;
+                    color: black;
+                } 
+
+            .segunda{
+                background-color:rgb(240, 240, 240);
+                width: 80%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 80px;
+            }
+
+                .retângulo{
+                    background-color:black;
+                    width: 400px;
+                    height: 700px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: flex-start;
+                    border-radius: 20px;
+                }
+
+                    .foto{
+                        background-image: url(/perfil.png);
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        width: 100%;
+                        height: 86%;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-end;
+                        justify-content: center;
+                        border-radius: 20px;
+                       
+                    }
+
+                    .escrita{
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-start;
+                        justify-content: space-evenly;
+                    }
+
+                    .nome{
+                        display: flex;
+                        align-items: baseline;
+                        justify-content: space-between;
+                        font-family: Verdana, Geneva, Tahoma, sans-serif;
+                        font-size: 16px;
+                        text-align: left;
+                        color: ghostwhite;
+                        gap: 10px;
+                        margin-left: 10px;
+                    }
+
+                    .infos{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-start;
+                        justify-content: flex-start;
+                        margin-bottom: 10px;
+                    }
+
+                        .online{
+                            display: flex;
+                            align-items: baseline;
+                            justify-content: flex-start;
+                            font-family: Verdana, Geneva, Tahoma, sans-serif;
+                            font-size: 12px;
+                            text-align: start;
+                            color: ghostwhite;
+                            margin-left: 10px;
+                            gap: 10px;
+                        }
+    
+                        .curso{
+                            display: flex;
+                            align-items: baseline;
+                            justify-content: flex-start;
+                            font-family: Verdana, Geneva, Tahoma, sans-serif;
+                            font-size: 14px;
+                            text-align: left;
+                            color: ghostwhite;
+                            margin-left: 10px;
+                            gap: 50px;
+                        }
+
+                    .discriminante{
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        margin-left: 10px;
+                        margin-bottom: 10px;
+                        margin-right: 10px;
+                        gap: 15px;
+                    }
+
+                        .button4{
+                            background-color:rgba(100, 96, 96, 0.192);
+                            width: 63px;
+                            height: 63px;
+                            border-radius: 44px;
+                            border-style: solid;
+                            cursor: pointer;
+                        }
+
+                        .branco{
+                            border-color:#F2F2F2;
+                        }
+
+                        .vermelho{
+                            border-color: #BF1F1F;
+                        }
+
+                        .azul{
+                            border-color:#30F2DF;
+                        }
+
+                        .verde{
+                            border-color:#30F284;
+                        }
+
+                        .roxo{
+                            border-color:#B252F2;
+                        }
+
+                    .faixa{
+                        display: flex;
+                        align-items: baseline;
+                        width: 100%;
+                        justify-content: center;
+                        gap: 15px;
+                    }
+                        .button6{
+                            background-color:#9FB7A6;
+                            width: 90px;
+                            height: 26px;
+                            border-radius: 20px;
+                            border: none;
+                            cursor: pointer;
+                            color:ghostwhite;
+                            filter: none;
+                            text-align: flex-start;
+                            font-weight: 600;
+                            position: relative; 
+                        }
+
+                        .filtro{
+                            display: flex;
+                            align-items: flex-start;
+                            justify-content: space-between;
+                            margin-left: 10px;
+                            margin-bottom: 10px;
+                            margin-right: 10px;
+                            gap: 20px;
+                            filter: invert(48%) sepia(79%) saturate(50%) hue-rotate(86deg) brightness(118%) contrast(119%);
+
+                        }
+
+                        .button5{
+                            background-color: transparent;
+                            width: 22px;
+                            height: 22px;
+                            border: none;
+                            cursor: pointer;
+                        }
+
+                        .não{
+                            display: flex;
+                            font-family: Verdana, Geneva, Tahoma, sans-serif;
+                            font-size: 14px;
+                            font-weight: 600;
+                            justify-content: space-evenly;
+                            align-items:center;
+                            color: black;
+                            gap: 7px;
+                        } 
+
+                        .curti{
+                            display: flex;
+                            font-family: Verdana, Geneva, Tahoma, sans-serif;
+                            font-size: 14px;
+                            font-weight: 600;
+                            justify-content: space-evenly;
+                            align-items:center;
+                            color: black;
+                            gap: 7px;
+                        } 
+
+                        .abrir{
+                            display: flex;
+                            font-family: Verdana, Geneva, Tahoma, sans-serif;
+                            font-size: 14px;
+                            font-weight: 600;
+                            justify-content: space-evenly;
+                            align-items:center;
+                            color: black;
+                            gap: 7px;
+                        } 
+
+                        .fechar{
+                            display: flex;
+                            font-family: Verdana, Geneva, Tahoma, sans-serif;
+                            font-size: 14px;
+                            font-weight: 600;
+                            justify-content: space-evenly;
+                            align-items:center;
+                            color: black;
+                            gap: 7px;
+                        } 
+
+                        .super{
+                            display: flex;
+                            font-family: Verdana, Geneva, Tahoma, sans-serif;
+                            font-size: 14px;
+                            font-weight: 600;
+                            justify-content: space-evenly;
+                            align-items:center;
+                            color: black;
+                            gap: 7px;
+                        } 
+
+                        .prox{
+                            display: flex;
+                            font-family: Verdana, Geneva, Tahoma, sans-serif;
+                            font-size: 14px;
+                            align-items: center;
+                            justify-content: flex-start;
+                            color: #9FB7A6;
+                            gap: 7px;
+                            font-weight: 600;
+                        }
+
+                            .button7{
+                                background-color:transparent;
+                                width: 90px;
+                                height: 24px;
+                                border-radius: 7px;
+                                border-width: 100;
+                                border:solid;
+                                border-color:#9FB7A6;
+                                cursor: pointer;
+                                filter: invert(48%) sepia(79%) saturate(50%) hue-rotate(86deg) brightness(118%) contrast(119%);
+                        }
+                
+            footer{
+                width: 20%;
+                height: 800px;
+                background-color:ghostwhite;
+            }
+
+        </style>
+
+    </head>
+
+    <body>
+
+        <header>
+            
+            <div class="usuario">
+                <img class="logo" src="./assets/logo.png" height="36px" width="36px" border-radius="20px" />
+                <button class="button1">Fluxo Consultoria</button>
+            </div>
+
+            <div class="botoes">
+                <button class="button2" type="button"> <img src="./assets/handbag.svg" height ="24px" width="24px" /></button>
+                <button class="button2" type="button"> <img src="./assets/shield.svg" height ="24px" width="24px" /></button>
+            </div>
+                
+        </header>
+
+        <div id="pai">
+
+            <div class="filha primeira">
+
+                <div class="teclas">
+                    <button class="button3">Matches</button>
+                    <button class="button3">Mensagens</button>
+                </div>
+
+                <div class="relato">
+                    <h1>Construtivo</h1>
+                    <p>
+                        O PAME tem sido positivo para mim, pois esta ocorrendo de forma organizada e os organizadores transmitem seriedade. A primeira capacitação, do Igor Leal, sobre HTML e CSS foi  muito didática, o que viabilizou a realização do primeiro entregável. Ainda sobre a primeira entrega, ter o apoio dos orientadores e do mentor foi de grande valia. Como sugestão, gostaria que as orientações do entregável fossem mais claras no pdf instrucional.
+                    </p>
+                </div>
+ 
+            </div>
+
+            <div class="filha segunda">
+
+                <div class="retângulo"> 
+
+                    <div class="foto"></div>
+
+                    <div class="escrita">
+                        <div class="nome">
+                            <h2>Ana Clara Langenegger</h2>
+                            <p>18</p>
+                            <img src="./pngwing.com.png" height ="20px" width="20px" > 
+                        </div>
+
+                        <div class="infos">
+
+                            <div class="online">
+                                <img src="./ponto_verde.png" height ="7px" width="7px"></img>
+                             <p>Online recentemente</p>
+                            </div>
+
+                            <div class="curso">
+                             <p>Eng. de Controle e Automação, 2º Período</p>
+                             <button class="button2" type="button"> <img src="./i_i.png" height ="20px" width="20px"></img> </button>
+                            </div>
+
+                        </div>    
+
+                        <div class="discriminante">
+                            <button class="button4 branco" type="button"> <img src="./assets/return.svg" height ="50px" width="50px" /></button>
+                            <button class="button4 vermelho" type="button"> <img src="./assets/x.svg" height ="50px" width="50px" /></button>
+                            <button class="button4 azul" type="button"> <img src="./assets/star.svg" height ="50px" width="50px" /></button>
+                            <button class="button4 verde" type="button"> <img src="./assets/heart.svg" height ="50px" width="50px" /></button>
+                            <button class="button4 roxo" type="button"> <img src="./assets/lightning.svg" height ="50px" width="50px" /></button>
+                        </div>
+                
+                    </div>
+
+                </div>
+
+                <div class="faixa">
+
+                        <button class="button6">OCULTAR</button>
+
+                    <div class="filtro">
+
+                       <div class="não"> 
+                            <button class="button5" type="button"> <img src="./assets/left.svg" height ="20px" width="20px" /></button>
+                            <p>NÃO</p>
+                        </div>
+                    
+                        <div class="curti">
+                            <button class="button5" type="button"> <img src="./assets/right.svg" height ="20px" width="20px" /></button>
+                            <p>CURTI</p>
+                        </div>
+                    
+                        <div class="abrir">
+                            <button class="button5" type="button"> <img src="./assets/up.svg" height ="20px" width="20px" /></button>
+                            <p>ABRIR PERFIL</p>
+                        </div>
+
+                        <div class="fechar">
+                            <button class="button5" type="button"> <img src="./assets/down.svg" height ="20px" width="20px" /></button>
+                            <p>FECHAR PERFIL</p>
+                        </div>
+                    
+                        <div class="super">
+                            <button class="button5" type="button"> <img src="./assets/enteringArrow.svg" height ="20px" width="20px" /></button>
+                            <p>SUPER PERFIL</p>
+                        </div>  
+
+                    </div>    
+                    
+                    <div class="prox">
+                        <button class="button7"></button>
+                        <p>PRÓXIMA FOTO</p>
+                    </div>
+                    
+
+                </div>
+ 
+            </div>
+
+        </div>
+
+        <footer>
+
+        </footer>
+
+    </body>
+
+</html>
+
